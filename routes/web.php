@@ -18,3 +18,5 @@ Route::get('/', function () {
 });
 
 Route::get('/authors', 'AuthorsController@index');
+
+Route::resource('posts', PostsController::class);
