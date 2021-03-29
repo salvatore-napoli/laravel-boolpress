@@ -17,6 +17,8 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/authors', 'AuthorsController@index');
+Route::get('authors', 'AuthorsController@index');
 
 Route::resource('posts', PostsController::class);
+
+Route::get('posts/{id}/comments', 'CommentsController@index');

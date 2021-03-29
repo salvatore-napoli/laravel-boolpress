@@ -10,6 +10,7 @@
 					<th scope="col">Author</th>
 					<th scope="col">Title</th>
 					<th scope="col">Body</th>
+					<th scope="col">Comments</th>
 				</tr>
 			</thead>
 			<tbody>
@@ -19,6 +20,7 @@
 						<td>{{$post->author}}</td>
 						<td>{{$post->title}}</td>
 						<td>{{$post->body}}</td>
+						<td><a href="posts/{{$post->id}}/comments">View comments</a></td>
 					</tr>
 				@endforeach
 			</tbody>
