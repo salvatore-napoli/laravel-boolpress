@@ -31,7 +31,6 @@ class PostsSeeder extends Seeder
         for ($p = 0; $p < rand(2, 5); $p++) {
           $post = new Post;
           $post->title = $faker->text(50);
-          $post->author = $author->name . ' ' . $author->surname;
           $post->body = $faker->text();
           $author->posts()->save($post);
 

@@ -11,16 +11,22 @@
 					<th scope="col">Title</th>
 					<th scope="col">Body</th>
 					<th scope="col">Comments</th>
+					<th scope="col">Tags</th>
 				</tr>
 			</thead>
 			<tbody>
 				@foreach ($posts as $post)
 					<tr>
 						<th scope="row">{{$post->id}}</th>
-						<td>{{$post->author}}</td>
+						<td>{{$post->author->name}} {{$post->author->surname}}</td>
 						<td>{{$post->title}}</td>
 						<td>{{$post->body}}</td>
-						<td><a href="posts/{{$post->id}}/comments">View comments</a></td>
+						<td><a href="{{$post->id}}/comments">View comments</a></td>
+						<td>
+							@foreach ($post->tags as $tag)
+								{{$tag->name}}
+							@endforeach
+						</td>
 					</tr>
 				@endforeach
 			</tbody>
