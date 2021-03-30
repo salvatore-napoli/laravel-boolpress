@@ -21,7 +21,7 @@
 						<td>{{$post->author->name}} {{$post->author->surname}}</td>
 						<td>{{$post->title}}</td>
 						<td>{{$post->body}}</td>
-						<td><a href="{{$post->id}}/comments">View comments</a></td>
+						<td><a href="posts/{{$post->id}}/comments">View comments</a></td>
 						<td>
 							@foreach ($post->tags as $tag)
 								{{$tag->name}}
