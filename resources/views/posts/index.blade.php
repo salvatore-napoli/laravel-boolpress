@@ -12,6 +12,7 @@
 					<th scope="col">Body</th>
 					<th scope="col">Comments</th>
 					<th scope="col">Tags</th>
+					<th scope="col">Images</th>
 				</tr>
 			</thead>
 			<tbody>
@@ -26,6 +27,9 @@
 							@foreach ($post->tags as $tag)
 								{{$tag->name}}
 							@endforeach
+						</td>
+						<td>
+							<img src="{{ URL::asset($post->image) }}" width="150px" height="200px" />
 						</td>
 					</tr>
 				@endforeach

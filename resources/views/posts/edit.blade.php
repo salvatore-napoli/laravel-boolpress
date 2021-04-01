@@ -3,4 +3,4 @@
 		@section('title', 'Authors')
 
 	@section('body')
-		@include('posts.form', ['edit' => false])
+		@include('posts.form', ['edit' => true])
